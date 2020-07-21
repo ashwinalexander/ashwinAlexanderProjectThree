@@ -1,0 +1,15 @@
+// About PORSCHE PICKER
+// 1. Use an array of objects to store at least 15 Porsche vehicle configurations i.e "the inventory"
+// Porsche Object values - Car Name, Year of Manufacture, Internal product code, Photo link, Price, Car Use (Daily/Weekend), One Line description.  
+// 2. Take in user inputs about their vehicular preferences: 
+//           - budget. Options: 1. Over $120,000 2. Under $120,000
+//           - car use. Options: 1. Daily Driver. 2. Weekend Fun Car. 
+//           - car age. Options: 1. New. 2. Used. 
+// 3. Error Handling: Ensure all options are selected before recommending a Porsche
+// 4. Save user inputs and compare it with the inventory. 
+// 5. Push matched objects (Porsches) into an array and then randomly select one of them. 
+// 6. Display the randomly selected object (Porsche) along with all its properties stored in the array. 
+// 7. (stretch goal): If there is more than one match, show a second randomly selected Porsche in smaller size below the Recommended Porsche. Display photo and name (neither will be clickable)
+// 8. (stretch goal): build an array of strings - with Porsche facts. Display a random Porsche fact along with the results. 
+// 9. (stretch goal): find ways to animate the image of the recommended Porsche. 
+// 10. This project will all be executed on a single page.
