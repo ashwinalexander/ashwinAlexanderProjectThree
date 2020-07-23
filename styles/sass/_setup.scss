@@ -338,3 +338,10 @@ textarea {
     clip: rect(00 0 0);
     overflow: hidden;
 }
+
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+    // border: 2px dotted pink;
+}
