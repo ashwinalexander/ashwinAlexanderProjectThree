@@ -354,19 +354,84 @@ img {
 }
 
 h1 {
-  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 7.9rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Droid Serif', serif;
+  font-size: 4.5rem;
+  text-transform: lowercase;
+}
+
+h3 {
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+  font-size: 4.0rem;
+  line-height: 5.8rem;
+  letter-spacing: .13rem;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  line-height: 5.8rem;
+  letter-spacing: 0.08rem;
+}
+
+input[type=radio],
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  letter-spacing: .01rem;
+}
+
+i {
+  font-size: 2.2rem;
+  color: #FF785A;
+}
+
+button {
+  font-family: 'Droid Serif', serif;
+  font-size: 5rem;
+  line-height: 4.16rem;
+  text-align: center;
+  color: #FF785A;
+  text-transform: uppercase;
+  padding: 20px;
+  margin-left: 5px;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.9rem;
+  letter-spacing: .01rem;
+  padding: 0px 20px;
+  color: #fafafa;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .porscheHero {
-  height: 70vh;
-  background: url("../assets/pierre-vandekerckhove-iwigrPxXkqc-unsplash.jpg") no-repeat top;
-  background-size: contain;
-}
-
-.porscheHero nav {
-  background-color: yellow;
+  height: 65vh;
+  background: url("../assets/pierre-vandekerckhove-iwigrPxXkqc-unsplash.jpg") no-repeat bottom;
+  background-size: cover;
+  border: 2px solid red;
 }
 
 .porscheHero h1 {
+  color: #FF785A;
+  font-weight: 600;
   color: red;
+  text-align: center;
+  margin-left: 20px;
+}
+
+footer {
+  background-color: #FF785A;
 }

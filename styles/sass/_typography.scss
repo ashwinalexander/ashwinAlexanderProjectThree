@@ -7,20 +7,67 @@ $accent-color: #FFF05A; //corn
 $light-color: #fafafa; //near-white
 $dark-color: #191919; //eerie black
 h1 {
-    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 7.9rem;
+    text-transform: uppercase;
 }
 
-h2 {}
+h2 {
+    font-family: 'Droid Serif', serif;
+    font-size: 4.5rem;
+    text-transform: lowercase;
+}
 
-h3 {}
+h3 {
+    font-family: 'Droid Serif', serif;
+    font-style: italic;
+    font-size: 4.0rem;
+    line-height: 5.8rem;
+    letter-spacing: .13rem;
+    text-transform: uppercase;
+}
 
-h4 {}
+h4 {
+    font-family: 'Droid Serif', serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    line-height: 5.8rem;
+    letter-spacing: 0.08rem;
+}
 
-h5 {}
+//body text
+input[type=radio],
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: .01rem;
+}
 
-button {}
+i {
+    font-size: 2.2rem;
+    color: $primary-color;
+}
 
-// font-family: 'Roboto', sans-serif;
-// font-size: 35px;
-// font-family: 'Droid Serif', serif;
-// font-size: 15px;
+button {
+    font-family: 'Droid Serif', serif;
+    font-size: 5rem;
+    line-height: 4.16rem;
+    text-align: center;
+    color: $primary-color;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-left: 5px;
+    ;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.9rem;
+    letter-spacing: .01rem;
+    padding: 0px 20px;
+    color: $light-color;
+    text-decoration: none;
+    display: inline-block;
+}
