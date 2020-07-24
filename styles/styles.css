@@ -338,22 +338,35 @@ textarea {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 100%;
   margin: 0px auto;
 }
 
-.porsche-hero {
-  height: 60vh;
+img {
+  width: 100%;
+  display: block;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.porscheHero {
+  height: 70vh;
   background: url("../assets/pierre-vandekerckhove-iwigrPxXkqc-unsplash.jpg") no-repeat top;
   background-size: contain;
 }
 
-.porsche-hero nav {
+.porscheHero nav {
   background-color: yellow;
 }
 
-.porsche-hero h1 {
+.porscheHero h1 {
   color: red;
 }

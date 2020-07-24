@@ -1,32 +1,245 @@
 // creating a namespace
 const PorschePicker = {};
 
-// build out a Porsche inventory 
+// building out a Porsche inventory of 20+ vehicles
 PorschePicker.inventory = {
-    coffee: [{
-            title: 'Early Bird',
-            price: '$$'
+    new: [{
+            year: 2020,
+            price: 113800,
+            car: 'Porsche Cayman GT4',
+            typeNumber: '982',
+            techSpecs: 'Mid-engine 4L / 414hp',
+            photo: 'assets/2020 Porsche Cayman GT4 Alexander Migl Wikipedia Commons.jpg',
+            attribution: 'Photo by Alexander Migl',
+            type: 'Weekend'
         },
         {
-            title: 'Dark Horse',
-            price: '$'
+            year: 2020,
+            price: 119400,
+            car: 'Porsche Taycan',
+            typeNumber: 'n/a',
+            techSpecs: '522hp',
+            photo: 'assets/2020 Porsche Taycan Alexander Migl Wikipedia Commons.jpg',
+            attribution: 'Photo by Alexander Migl',
+            type: 'Daily'
         },
         {
-            title: 'Le Gourmand',
-            price: '$'
+            year: 2020,
+            price: 194400,
+            car: 'Porsche 911 Turbo',
+            typeNumber: '992',
+            techSpecs: 'Twin turbo 3.7L flat 6 / 572hp',
+            photo: 'assets/2020 Porsche 911 Turbo 992 Wallpaper Flare.jpg',
+            attribution: 'Photo by Wallpaper Flare',
+            type: 'Weekend'
+        },
+        {
+            year: 2020,
+            price: 139500,
+            car: 'Porsche 911 Carrera 4S',
+            typeNumber: '992',
+            techSpecs: 'Twin turbo 3.0L flat 6 / 443 hp',
+            photo: 'assets/992 Porsche 911 Alexander Migl Wikipedia Commons.jpg',
+            attribution: 'Photo by Alexander Migl',
+            type: 'Daily'
+                //this car is categorised as both a Weekend and a Daily Driver
+        },
+        {
+            year: 2020,
+            price: 139500,
+            car: 'Porsche 911 Carrera 4S',
+            typeNumber: '992',
+            techSpecs: 'Twin turbo 3.0L flat 6 / 443 hp',
+            photo: 'assets/992 Porsche 911 Alexander Migl Wikipedia Commons.jpg',
+            attribution: 'Photo by Alexander Migl',
+            type: 'Weekend'
+                //this car is categorised as both a Weekend and a Daily Driver
+        },
+        {
+            year: 2020,
+            price: 66800,
+            car: 'Porsche 718 Boxster',
+            typeNumber: '982',
+            techSpecs: 'Turbocharged 2.0L flat 4 / 300hp',
+            photo: 'assets/2020 Porsche Boxster Alexander Migl Wikipedia Commons',
+            attribution: 'Photo by Alexander Migl',
+            type: 'Weekend'
+        },
+        {
+            year: 2020,
+            price: 99300,
+            car: 'Porsche Panamera',
+            typeNumber: '971',
+            techSpecs: '3.0L V6 / 330hp',
+            photo: 'assets/2020 Porsche Panamera Alexandre Prevot Wikipedia Commons.jpg',
+            attribution: 'Photo by Alex Prevot Flickr',
+            type: 'Daily'
+        },
+        {
+            year: 2020,
+            price: 178360,
+            car: 'Porsche Taycan Turbo',
+            typeNumber: 'n/a',
+            techSpecs: '616 hp',
+            photo: 'assets/2020 Porsche Taycan Alexander Migl Wikipedia Commons.jpg',
+            attribution: 'Photo by Alexander Migl',
+            type: 'Weekend'
+                //this car is categorised as both a Weekend and a Daily Driver
+        },
+        {
+            year: 2020,
+            price: 178360,
+            car: 'Porsche Taycan Turbo',
+            typeNumber: 'n/a',
+            techSpecs: '616 hp',
+            photo: 'assets/2020 Porsche Taycan Alexander Migl Wikipedia Commons.jpg',
+            attribution: 'Photo by Alexander Migl',
+            type: 'Daily'
+                //this car is categorised as both a Weekend and a Daily Driver
+        },
+
+        {
+            year: 2020,
+            price: 81700,
+            car: 'Porsche 718 Boxter S',
+            typeNumber: '982',
+            techSpecs: '2.5L boxer 4 / 350hp',
+            photo: 'assets/Porsche Boxster S Vauxford Wikipedia Commons.jpg',
+            attribution: 'Photo by Vauxford',
+            type: 'Weekend'
+
+        },
+        {
+            year: 2020,
+            price: 98000,
+            car: 'Porsche Macan Turbo',
+            typeNumber: '95B',
+            techSpecs: '3.0L V6 / 434hp',
+            photo: 'assets/Porsche Macan Turbo Alexander Migl Wikipedia Commons.jpg',
+            attribution: 'Photo by Alexander Migl',
+            type: 'Daily'
+
+        },
+
+        {
+            year: 2020,
+            price: 185600,
+            car: 'Porsche Cayenne Turbo S E-hybrid',
+            typeNumber: '9YA',
+            techSpecs: '4.0L V8 / 670hp',
+            photo: 'assets/Porsche Cayenne Hybrid Mariordo Wikipedia Commons.jpg',
+            attribution: 'Photo by Mariordo',
+            type: 'Daily'
         }
     ],
-    tea: [{
-            title: 'David\'s Tea',
-            price: '$$'
+    classic: [{
+            year: 1998,
+            price: 105000,
+            car: 'Porsche 993 ',
+            typeNumber: '993',
+            techSpecs: '3.6L Flat 6/ 282 hp',
+            photo: 'assets/Porsche 993 Mr Choppers Wikipedia Commons.jpg',
+            attribution: 'Photo by Mr. Choppers',
+            type: 'Weekend'
+        }, {
+            year: 1984,
+            price: 20000,
+            car: 'Porsche 944 Turbo',
+            typeNumber: '951',
+            techSpecs: '2.5L Turbocharged Inline-Four / 217hp',
+            photo: 'assets/1984 Porsche 944 Daniel Leivick Wikipedia Commons.jpg',
+            attribution: 'Photo by Daniel Leivick',
+            type: 'Daily'
         },
         {
-            title: 'Tealish',
-            price: '$$'
+            year: 2004,
+            price: 772000,
+            car: 'Porsche Carrera GT',
+            typeNumber: '980',
+            techSpecs: '5.7L V10 / 605 hp',
+            photo: 'assets/2004 Carrera GT Flickr Damian Morys.jpg',
+            attribution: 'Photo by Damian Morys',
+            type: 'Weekend'
         },
         {
-            title: 'Teavana',
-            price: '$'
+            year: 2015,
+            price: 1700000,
+            car: 'Porsche 918 Spyder',
+            typeNumber: '918',
+            techSpecs: '4.6L V8 / 875 hp',
+            photo: 'assets/2015 Porsche 918 Spyder Craig James Wikimedia Commons.jpg',
+            attribution: 'Photo by Craig James',
+            type: 'Weekend'
+        },
+        {
+            year: 1975,
+            price: 36000,
+            car: 'Porsche 914',
+            typeNumber: '914',
+            techSpecs: '1.8L Flat-Four / 76hp',
+            photo: 'assets/1975 Porsche 914 Mr Choppers Wikipedia Commons.jpg',
+            attribution: 'Photo by Mr. Choppers',
+            type: 'Weekend'
+        },
+        {
+            year: 1992,
+            price: 33000,
+            car: 'Mercedes 500E (built at Porsche Stuttgart!)',
+            typeNumber: '2758',
+            techSpecs: '5.0L V8 / 322hp',
+            photo: 'assets/Mercedes 500E PAPPL Wikipedia Commons.jpg',
+            attribution: 'Photo by PAPPL',
+            type: 'Daily'
+        },
+        {
+            year: 1986,
+            price: 141000,
+            car: 'Porsche 911 Turbo (930)',
+            typeNumber: '930',
+            techSpecs: '3.3L Flat-Six / 282 hp',
+            photo: 'assets/Porsche 930 Flickr By nakhon100.jpg',
+            attribution: 'Photo by nakhon100',
+            type: 'Weekend'
+        },
+        {
+            year: 1993,
+            price: 87000,
+            car: '928 GTS',
+            typeNumber: '928',
+            techSpecs: '5.4L V8 / 200hp',
+            photo: 'assets/Porsche 928 GTS Stahlkocher Wikipedia Commons.jpg',
+            attribution: 'Photo by Stahlkocher',
+            type: 'Weekend'
+        },
+        {
+            year: 2000,
+            price: 36000,
+            car: 'Porsche 911 Carrera',
+            typeNumber: '996',
+            techSpecs: '3.4L Flat-six / 345hp',
+            photo: 'assets/996 Carrera Mark Harkin Flickr.jpg',
+            attribution: 'Photo by Mark Harkin',
+            type: 'Daily'
+        },
+        {
+            year: 1958,
+            price: 328000,
+            car: 'Porsche 356 Speedster',
+            typeNumber: '356',
+            techSpecs: '1.6L Flat-four / 60 hp',
+            photo: 'assets/Porsche 356 Speedster Alexander Migl Wikipedia Commons.jpg',
+            attribution: 'Photo by Alexander Migl',
+            type: 'Weekend'
+        },
+        {
+            year: 2018,
+            price: 121000,
+            car: 'Porsche Panamera 4 e-Hybrid',
+            typeNumber: '971',
+            techSpecs: '2.9L V6 / 462hp',
+            photo: 'assets/Porsche Panamera e-Hybrid Jakub Maciejewski Wikipedia Commons.jpg',
+            attribution: 'Photo by Jakbu Maciejewski',
+            type: 'Daily'
         }
     ]
 };
