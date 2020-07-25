@@ -5,11 +5,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        ;
         padding: 20px;
         h2 {
-            font-weight: 900;
-            color: white;
+            color: $light-color;
         }
     }
     .pickerLongDesc {
@@ -23,7 +21,31 @@
     }
 }
 
-// the quiz
+// the quiz questions and associated options
 .porscheQuiz {
-    .porscheQuestion {}
+    .porscheQuestion {
+        padding-top: 20px;
+        background-color: $light-color;
+        .questionRow {
+            justify-content: space-between;
+            background-color: $accent-color;
+        }
+        h3 {
+            font-weight: bold;
+            padding: 20px;
+        }
+        label {
+            font-size: 2rem;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        .porscheOption {
+            padding: 20px 0px 0px 20px;
+            p {
+                padding-top: 10px;
+                font-size: 1.5rem;
+                ;
+            }
+        }
+    }
 }

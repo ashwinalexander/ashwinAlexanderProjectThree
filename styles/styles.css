@@ -362,8 +362,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-preferred-size: 100px;
-      flex-basis: 100px;
 }
 
 h1,
@@ -373,17 +371,27 @@ h4,
 h5,
 h6,
 p,
+a,
+label,
+input,
 button {
   font-family: "Space Mono", monospace;
 }
 
 h1 {
-  text-transform: uppercase;
   font-weight: 900;
+  text-transform: uppercase;
+  font-size: 3rem;
 }
 
 h2 {
   font-size: 2.5rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 input[type=radio],
@@ -403,13 +411,7 @@ button {
 }
 
 a {
-  font-family: 'Roboto', sans-serif;
   font-size: 1.8rem;
-  line-height: 2.9rem;
-  letter-spacing: .01rem;
-  padding: 0px 20px;
-  color: #fafafa;
-  text-decoration: none;
   display: inline-block;
 }
 
@@ -422,9 +424,7 @@ header nav div {
 }
 
 header nav div h1 {
-  text-transform: uppercase;
-  font-size: 3rem;
-  color: white;
+  color: #fafafa;
 }
 
 footer .credits {
@@ -446,8 +446,7 @@ footer .credits {
 }
 
 .porscheIntro .pickerShortDesc h2 {
-  font-weight: 900;
-  color: white;
+  color: #fafafa;
 }
 
 .porscheIntro .pickerLongDesc {
@@ -459,4 +458,36 @@ footer .credits {
   font-weight: bold;
   text-align: right;
   color: #191919;
+}
+
+.porscheQuiz .porscheQuestion {
+  padding-top: 20px;
+  background-color: #fafafa;
+}
+
+.porscheQuiz .porscheQuestion .questionRow {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #FFF05A;
+}
+
+.porscheQuiz .porscheQuestion h3 {
+  font-weight: bold;
+  padding: 20px;
+}
+
+.porscheQuiz .porscheQuestion label {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.porscheQuiz .porscheQuestion .porscheOption {
+  padding: 20px 0px 0px 20px;
+}
+
+.porscheQuiz .porscheQuestion .porscheOption p {
+  padding-top: 10px;
+  font-size: 1.5rem;
 }

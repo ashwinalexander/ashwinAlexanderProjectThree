@@ -1,8 +1,8 @@
 // creating a namespace
-const PorschePicker = {};
+const porschePicker = {};
 
-// building out a Porsche inventory of 20+ vehicles
-PorschePicker.inventory = {
+// building an inventory of 20+ Porsches (and one itinerant Mercedes!)
+porschePicker.inventory = {
     new: [{
             year: 2020,
             price: 113800,
@@ -182,9 +182,11 @@ PorschePicker.inventory = {
             type: 'Weekend'
         },
         {
+            //The Mercedes 500E was hand-assembled in Stuttgart and many consider it the first Porsche super sedan 
+            //predating the Panamera
             year: 1992,
             price: 33000,
-            car: 'Mercedes 500E (built at Porsche Stuttgart!)',
+            car: 'Mercedes 500E (hand-assembled at Porsche Stuttgart!)',
             typeNumber: '2758',
             techSpecs: '5.0L V8 / 322hp',
             photo: 'assets/Mercedes 500E PAPPL Wikipedia Commons.jpg',
@@ -245,22 +247,19 @@ PorschePicker.inventory = {
 };
 
 
-
-
-
 //build the randomiser
 
 //
 
 
+$(document).ready(function() {
 
-
-
-//getting things started
-$(document).ready()({
-
-
-
-
+    //Event handlers
+    $(".btnStart").click(function(e) {
+        e.preventDefault();
+        $("html").animate({
+            scrollTop: $('.porscheQuiz').offset().top
+        }, "slow");
+    });
 
 });
