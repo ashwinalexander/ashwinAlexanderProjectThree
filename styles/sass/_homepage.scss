@@ -24,9 +24,8 @@
 // the quiz questions and associated options
 .porscheQuiz {
     .porscheQuestion {
-        height: 50vh;
-        padding-top: 20px;
         background-color: $light-color;
+        padding-bottom: 50px;
         .questionRow {
             justify-content: space-between;
             background-color: $accent-color;
@@ -39,6 +38,15 @@
             font-size: 2rem;
             font-weight: bold;
             padding-left: 10px;
+        }
+        .submitContainer {
+            justify-content: center;
+            padding-top: 40px;
+            .btnSubmit {
+                background-color: $secondary-color;
+                color: $light-color;
+                font-weight: 900;
+            }
         }
         .porscheOption {
             padding: 20px 0px 0px 20px;

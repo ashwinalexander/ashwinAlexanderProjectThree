@@ -246,15 +246,10 @@ porschePicker.inventory = {
     ]
 };
 
+//Event Listeners
+porschePicker.eventListener = function() {
 
-//build the randomiser
-
-//
-
-
-$(document).ready(function() {
-
-    //"get started" Event handler
+    //"get started" Event listener
     $(".btnStart").click(function(e) {
         e.preventDefault();
         $("html").animate({
@@ -263,16 +258,29 @@ $(document).ready(function() {
     });
 
 
-
+    //"skip to next question" Event listener
     $(".linkUse .linkAge").click(function(e) {
         e.preventDefault();
         let jump = $(this).attr('href');
-
         let new_position = $(jump).offset();
         $("html,body").stop().animate({
-            scrollTop: new_position.top
-        }, "slow");
+            scrollTop: new_position.top - 50
+        }, "800");
     });
+}
 
 
+
+//build the randomiser
+
+//
+
+porschePicker.init = function() {
+    porschePicker.eventListener();
+}
+
+
+//initialising everything
+$(document).ready(function() {
+    porschePicker.init();
 });

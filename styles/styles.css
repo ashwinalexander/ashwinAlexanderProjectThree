@@ -461,9 +461,8 @@ footer .credits {
 }
 
 .porscheQuiz .porscheQuestion {
-  height: 50vh;
-  padding-top: 20px;
   background-color: #fafafa;
+  padding-bottom: 50px;
 }
 
 .porscheQuiz .porscheQuestion .questionRow {
@@ -482,6 +481,19 @@ footer .credits {
   font-size: 2rem;
   font-weight: bold;
   padding-left: 10px;
+}
+
+.porscheQuiz .porscheQuestion .submitContainer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+}
+
+.porscheQuiz .porscheQuestion .submitContainer .btnSubmit {
+  background-color: #FFAA5A;
+  color: #fafafa;
+  font-weight: 900;
 }
 
 .porscheQuiz .porscheQuestion .porscheOption {
