@@ -6,59 +6,43 @@ $tertiary-color: #FFD25A; //Orange Yellow Crayola
 $accent-color: #FFF05A; //corn
 $light-color: #fafafa; //near-white
 $dark-color: #191919; //eerie black
+$font-family: 'Space Mono',
+monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+    font-family: $font-family;
+}
+
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 7.9rem;
     text-transform: uppercase;
+    font-weight: 900;
 }
 
 h2 {
-    font-family: 'Droid Serif', serif;
-    font-size: 4.5rem;
-    text-transform: lowercase;
-}
-
-h3 {
-    font-family: 'Droid Serif', serif;
-    font-style: italic;
-    font-size: 4.0rem;
-    line-height: 5.8rem;
-    letter-spacing: .13rem;
-    text-transform: uppercase;
-}
-
-h4 {
-    font-family: 'Droid Serif', serif;
-    font-style: italic;
     font-size: 2.5rem;
-    line-height: 5.8rem;
-    letter-spacing: 0.08rem;
 }
 
 //body text
 input[type=radio],
 p {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     line-height: 2.8rem;
     letter-spacing: .01rem;
 }
 
-i {
-    font-size: 2.2rem;
-    color: $primary-color;
-}
-
 button {
-    font-family: 'Droid Serif', serif;
-    font-size: 5rem;
-    line-height: 4.16rem;
+    font-size: 2.5rem;
     text-align: center;
     color: $primary-color;
     text-transform: uppercase;
-    padding: 20px;
-    margin-left: 5px;
-    ;
+    padding: 10px 20px;
+    background-color: $light-color
 }
 
 a {

@@ -346,6 +346,7 @@ html {
   max-width: 1200px;
   width: 100%;
   margin: 0px auto;
+  border: 2px dotted pink;
 }
 
 img {
@@ -353,57 +354,52 @@ img {
   display: block;
 }
 
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+  font-family: "Space Mono", monospace;
+}
+
 h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 7.9rem;
   text-transform: uppercase;
+  font-weight: 900;
 }
 
 h2 {
-  font-family: 'Droid Serif', serif;
-  font-size: 4.5rem;
-  text-transform: lowercase;
-}
-
-h3 {
-  font-family: 'Droid Serif', serif;
-  font-style: italic;
-  font-size: 4.0rem;
-  line-height: 5.8rem;
-  letter-spacing: .13rem;
-  text-transform: uppercase;
-}
-
-h4 {
-  font-family: 'Droid Serif', serif;
-  font-style: italic;
   font-size: 2.5rem;
-  line-height: 5.8rem;
-  letter-spacing: 0.08rem;
 }
 
 input[type=radio],
 p {
-  font-family: 'Roboto', sans-serif;
   font-size: 1.8rem;
   line-height: 2.8rem;
   letter-spacing: .01rem;
 }
 
-i {
-  font-size: 2.2rem;
-  color: #FF785A;
-}
-
 button {
-  font-family: 'Droid Serif', serif;
-  font-size: 5rem;
-  line-height: 4.16rem;
+  font-size: 2.5rem;
   text-align: center;
   color: #FF785A;
   text-transform: uppercase;
-  padding: 20px;
-  margin-left: 5px;
+  padding: 10px 20px;
+  background-color: #fafafa;
 }
 
 a {
@@ -417,21 +413,50 @@ a {
   display: inline-block;
 }
 
-.porscheHero {
-  height: 65vh;
-  background: url("../assets/pierre-vandekerckhove-iwigrPxXkqc-unsplash.jpg") no-repeat bottom;
-  background-size: cover;
-  border: 2px solid red;
+header nav {
+  background: #191919;
 }
 
-.porscheHero h1 {
-  color: #FF785A;
-  font-weight: 600;
-  color: red;
-  text-align: center;
-  margin-left: 20px;
+header nav div {
+  padding: 10px;
 }
 
-footer {
+header nav div h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: white;
+}
+
+footer .credits {
   background-color: #FF785A;
+}
+
+.porscheIntro .pickerShortDesc {
+  background-color: #FF785A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+.porscheIntro .pickerShortDesc h2 {
+  font-weight: 900;
+  color: white;
+}
+
+.porscheIntro .pickerLongDesc {
+  padding: 20px;
+  background-color: #FFD25A;
+}
+
+.porscheIntro .pickerLongDesc h2 {
+  font-weight: bold;
+  text-align: right;
+  color: #191919;
 }

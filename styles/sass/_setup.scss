@@ -347,10 +347,16 @@ html {
     max-width: 1200px;
     width: 100%;
     margin: 0px auto;
-    // border: 2px dotted pink;
+    border: 2px dotted pink;
 }
 
 img {
     width: 100%;
     display: block;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100px;
 }

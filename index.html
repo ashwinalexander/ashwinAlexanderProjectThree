@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="image/png" href="assets/porsche-favicon-unsplash.png" rel="icon">
-    <!-- importing Google fonts: Roboto Light + Droid Serif Regular -->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Roboto:300" rel="stylesheet">
+    <!-- importing Google fonts: Space Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <!-- linking to an external stylesheet -->
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <!-- linking to fontawesome icons -->
@@ -15,23 +15,42 @@
 </head>
 
 <body>
-    <header class="porscheHero">
+    <header>
         <div class="wrapper">
             <nav>
+                <div class="flex-row">
+                    <h1>Porsche Picker</h1>
+                </div>
             </nav>
-            <h1>porsche picker</h1>
-            <button class="getStarted">Get Started</button>
         </div>
     </header>
     <main>
-        <section class="wrapper">
+        <section class="wrapper porscheIntro">
+            <!-- hero image with description of what the website does -->
+            <div class="porscheHero">
+                <img src="./assets/pierre-vandekerckhove-iwigrPxXkqc-unsplash.jpg" alt="Porsche 911 (964) on the hills over Collioure and the Mediterranean Sea. Photo by">
+            </div>
+
+            <div class="pickerShortDesc">
+                <div>
+                    <h2>Find the Porsche that is right for you</h2>
+                </div>
+                <div class="buttonInsert">
+                    <button>start</button>
+                </div>
+            </div>
+            <div class="pickerLongDesc">
+                <p> Porsches. They're the perfect marriage of engineering and styling. And they represent all you can ever want in a car. But once you know you want one, how do you know which one to want? Enter Porsche Picker. Whether you're looking for a
+                    weekend track toy, or a daily commuter car, the latest that Stuttgart has to offer, or an air-cooled classic, we are here to help. </p>
+            </div>
             <div>
-                <p>adad</p>
+
             </div>
         </section>
-        <section class="wrapper">
-            <div>
-                <p>adad</p>
+        <section class="wrapper porscheQuiz">
+            <div class="porscheQuestion">
+
+
             </div>
         </section>
     </main>
@@ -39,15 +58,14 @@
     <script src="scripts/scripts.js"></script>
 </body>
 <footer>
-    <div class="wrapper">
-        <p>Built by Ashwin Alexander</p>
+    <div class="wrapper credits">
+        <p>.</p>
     </div>
     <!-- footer credits list: 
     2. <span>Photo by <a href="https://unsplash.com/@pierrevdk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Pierre Vandekerckhove</a> on <a href="https://unsplash.com/s/photos/porsche?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
     3. Porsche 911 (964) on the hills over Collioure and the Mediterranean Sea
     4. https://en.wikipedia.org/wiki/Porsche_type_numbers
-    5.
-    6.
+        6.
     7.-->
 </footer>
 
