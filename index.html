@@ -42,8 +42,8 @@
                 </div>
             </div>
             <div class="pickerLongDesc">
-                <p> Porsches. They're the perfect combination of racing heritage, German engineering and understated styling. And they represent all you can ever want in a car. But once you know you want one, how do you know which one to want? Enter Porsche
-                    Picker. Whether you're looking for a weekend track toy, or a daily commuter car, the latest that Stuttgart has to offer, or an air-cooled classic, we are here to help. </p>
+                <p> Porsches. They're the perfect combination of racing heritage, German engineering and understated styling. And they represent all you can ever want in a car. But once you know you want one, how do you know which one to want? Well, we've
+                    got you covered. Whether you're looking for a weekend track toy, or a daily commuter car, the latest that Stuttgart has to offer, or an air-cooled classic, we are here to help. </p>
             </div>
             <div>
 
@@ -51,19 +51,19 @@
         </section>
         <section class="wrapper porscheQuiz">
             <form action="">
-                <fieldset class="porscheQuestion porscheUse">
+                <fieldset class="porscheQuestion" id="#porscheUse">
                     <div class="flex-row questionRow">
                         <div>
                             <h3>What Porsche are you looking for?</h3>
                         </div>
                         <div>
-                            <a href="">next question</a>
+                            <a class="linkUse" href="#PorscheAge">next question</a>
                         </div>
                     </div>
-                    <div class=" flex-column">
+                    <div class="flex-column">
                         <div class="porscheOption">
                             <input type="radio" name="type" id="dailyDriver" value="dailyDriver">
-                            <label for="dailyDriver">Daily driver</label>
+                            <label for="dailyDriver">Daily Driver</label>
                             <p>A car you can toss around on your way to and from work or the grocery store</p>
                         </div>
                         <div class="porscheOption">
@@ -73,16 +73,15 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="porscheQuestion porscheAge">
+                <fieldset class="porscheQuestion" id="PorscheAge">
                     <div class="flex-row questionRow">
                         <div>
                             <h3>Would you prefer an all-new 2O2O Porsche, or a classic Porsche? </h3>
                         </div>
                         <div>
-                            <a href="">next question</a>
+                            <a href="#porscheBudget" class="linkAge">next question</a>
                         </div>
                     </div>
-
                     <div class="flex-column">
                         <div class="porscheOption">
                             <input type="radio" name="age" id="newPorsche" value="newPorsche">
@@ -97,8 +96,7 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="porscheQuestion porscheBudget">
-
+                <fieldset class="porscheQuestion" id="porscheBudget">
                     <div class="flex-row questionRow">
                         <div>
                             <h3>What is your budget?</h3>
@@ -122,9 +120,9 @@
 
                         </div>
                     </div>
-                    <div class="submit-container">
+                    <!-- <div class="submit-container">
                         <input type="submit" value="Find my Porsche">
-                    </div>
+                    </div> -->
                 </fieldset>
 
 

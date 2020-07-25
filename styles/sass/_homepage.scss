@@ -24,6 +24,7 @@
 // the quiz questions and associated options
 .porscheQuiz {
     .porscheQuestion {
+        height: 50vh;
         padding-top: 20px;
         background-color: $light-color;
         .questionRow {

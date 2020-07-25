@@ -461,6 +461,7 @@ footer .credits {
 }
 
 .porscheQuiz .porscheQuestion {
+  height: 50vh;
   padding-top: 20px;
   background-color: #fafafa;
 }

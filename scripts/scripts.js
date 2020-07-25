@@ -254,12 +254,25 @@ porschePicker.inventory = {
 
 $(document).ready(function() {
 
-    //Event handlers
+    //"get started" Event handler
     $(".btnStart").click(function(e) {
         e.preventDefault();
         $("html").animate({
             scrollTop: $('.porscheQuiz').offset().top
         }, "slow");
     });
+
+
+
+    $(".linkUse .linkAge").click(function(e) {
+        e.preventDefault();
+        let jump = $(this).attr('href');
+
+        let new_position = $(jump).offset();
+        $("html,body").stop().animate({
+            scrollTop: new_position.top
+        }, "slow");
+    });
+
 
 });
