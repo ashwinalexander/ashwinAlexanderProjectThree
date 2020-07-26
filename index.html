@@ -61,16 +61,14 @@
                         </div>
                     </div>
                     <div class="flex-column">
+
                         <div class="porscheOption">
-                            <p class="warning errorInvisibility">please make a selection</p>
-                        </div>
-                        <div class="porscheOption">
-                            <input type="radio" name="type" id="dailyDriver" value="dailyDriver" required>
+                            <input type="radio" name="type" id="dailyDriver" value="Daily" required>
                             <label for="dailyDriver">Daily Driver</label>
                             <p>A high-performance yet practical car for commutes and grocery runs</p>
                         </div>
                         <div class="porscheOption">
-                            <input type="radio" name="type" id="weekendCar" value="weekendCar" required>
+                            <input type="radio" name="type" id="weekendCar" value="Weekend" required>
                             <label for="weekendCar">Weekend Fun Car</label>
                             <p>A car built primarily for spirited driving</p>
                         </div>
@@ -87,16 +85,14 @@
                         </div>
                     </div>
                     <div class="flex-column">
+
                         <div class="porscheOption">
-                            <p class="warning errorInvisibility">please make a selection</p>
-                        </div>
-                        <div class="porscheOption">
-                            <input type="radio" name="age" id="newPorsche" value="newPorsche" required>
+                            <input type="radio" name="age" id="newPorsche" value="new" required>
                             <label for="newPorsche">2O2O Porsche</label>
                             <p>A Porsche built to your specifications shipped direct from Zuffenhausen</p>
                         </div>
                         <div class="porscheOption">
-                            <input type="radio" name="age" id="classicPorsche" value="classicPorsche" required>
+                            <input type="radio" name="age" id="classicPorsche" value="classic" required>
                             <label for="classicPorsche">Classic / Pre-owned Porsche</label>
                             <p>Analog classic Porsches from the 80s and used Porsches from more recently</p>
 
@@ -115,26 +111,28 @@
 
                     <div class="flex-column">
                         <div class="porscheOption">
-                            <p class="warning errorInvisibility">please make a selection</p>
-                        </div>
-                        <div class="porscheOption">
-                            <input type="radio" name="price" id="baller" value="baller" required>
-                            <label for="baller">Over $12O,OOO</label>
-                            <p>Typically gets newer Porsches and collectible classics</p>
-
-                        </div>
-                        <div class="porscheOption">
-                            <input type="radio" name="price" id="notBaller" value="notBaller" required>
-                            <label for="notBaller">Under $12O,OOO</label>
+                            <input type="radio" name="price" id="under" value="under" required>
+                            <label for="under">Under $12O,OOO</label>
                             <p> Typically pre-owned Porsches, high-mileage classics or transaxle era Porsches</p>
 
                         </div>
+
+                        <div class="porscheOption">
+                            <input type="radio" name="price" id="over" value="over" required>
+                            <label for="over">Over $12O,OOO</label>
+                            <p>Typically gets newer Porsches and collectible classics</p>
+
+                        </div>
+
                     </div>
                     <div class="submitContainer flex-row">
                         <button class="btnSubmit" type="submit">Find a Porsche</button>
                     </div>
                 </fieldset>
             </form>
+        </section>
+        <section class="displayPorsche wrapper">
+
         </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

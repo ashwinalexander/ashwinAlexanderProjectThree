@@ -246,32 +246,18 @@ porschePicker.inventory = {
     ]
 };
 
-//checking to see if all three checkboxes are checked.
-//returns true if all checkboxes are checked else displays a reminder
-porschePicker.errorHandling = function(use, age, budget) {
+//initialising everything
+$(document).ready(function() {
+    porschePicker.init();
+});
 
-        $('.porscheQuiz .warning').addClass('errorInvisibility'); //hide all warning labels
-        let unfilledFlag = true; //flag to indicate if there are unfilled checkboxes
+porschePicker.init = function() {
+    //setting up event listeners
+    porschePicker.eventListener();
+}
 
-        if (!use) {
 
-            unfilledFlag = false;
-            $('.porscheDailyWeekend .warning').removeClass('errorInvisibility'); //make warning label visible
-        }
-        if (!age) {
-            unfilledFlag = false;
-            $('.porscheOldNew .warning').removeClass('errorInvisibility'); //make warning label visible
-
-        }
-        if (!budget) {
-            unfilledFlag = false;
-            $('.porscheOverUnder .warning').removeClass('errorInvisibility'); //make warning label visible
-        }
-
-        return unfilledFlag;
-
-    }
-    //Event Listeners
+//Event Listeners
 porschePicker.eventListener = function() {
 
     //"get started" Event listener
@@ -292,48 +278,65 @@ porschePicker.eventListener = function() {
         }, "800");
     });
 
-    //clear warning labels if a value is selected
-    $('#porscheForm').on('change', ':radio', function() {
-        if ($(this).is(':checked')) {
-            console.log($(this).val() + ' is now checked');
-        } else {
-            console.log($(this).val() + ' is now unchecked');
-        }
-    });
 
     //on submitting the form
-    $(".btnSubmit").click(function(e) {
-        // e.preventDefault();
-        // console.log('checking');
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+        let porscheToDisplay;
+        porschePicker.porscheUse = $('input[name=type]:checked').val();
+        porschePicker.porscheAge = $('input[name=age]:checked').val();
+        porschePicker.porscheBudget = $('input[name=price]:checked').val();
 
-        // porschePicker.porscheUse = $('input[name=type]:checked').val();
-        // porschePicker.porscheAge = $('input[name=age]:checked').val();
-        // porschePicker.porscheBudget = $('input[name=price]:checked').val();
+        //begin only if all radio options are selected
+        if ((porschePicker.porscheUse) && (porschePicker.porscheAge) && (porschePicker.porscheBudget)) {
+            //get a random porsche that matches user selection
+            porscheToDisplay = porschePicker.getMatchingPorsche(porschePicker.porscheUse, porschePicker.porscheAge, porschePicker.porscheBudget);
+        }
 
-        // //proceed after confirming we have all our boxes checked
-        // if (porschePicker.errorHandling(porschePicker.porscheUse, porschePicker.porscheAge, porschePicker.porscheBudget)) {
-        //     console.log('good to go');
-        // }
+        porschePicker.displayPorsche(porscheToDisplay);
 
-
-        //if no selection return an error message label in the h3
-        //save selections to variables
-        //clear error message labels
-        //iterate through array
-        //find one random match
-        //display match on screeen
-        //if more than one, also display you may also be interested in
     });
 
 
 }
 
-porschePicker.init = function() {
-    porschePicker.eventListener();
+
+//returns 1 random Porsche based on user selections
+porschePicker.getMatchingPorsche = function(use, age, budget) {
+
+    const options = [];
+    let randomOption;
+    const choice = porschePicker.inventory[age]; //first filter for cars that are new or classic 
+
+    for (let i = 0; i < choice.length; i++) {
+        //filter for use (daily/weekend) and price range
+        if ((choice[i].type == use) && (budget == 'over' ? choice[i].price >= 120000 : choice[i].price < 120000)) {
+            options.push(choice[i]);
+        }
+    }
+
+    if (options.length > 1) {
+        //returns the one random Porsche
+        return porschePicker.randomPorsche(options);
+
+    } else {
+        //return no Porsches :(
+        return options;
+    }
 }
 
 
-//initialising everything
-$(document).ready(function() {
-    porschePicker.init();
-});
+//returns a random Porsches from the input array of Porsches
+porschePicker.randomPorsche = function(porscheList) {
+
+    const index = Math.floor(Math.random() * porscheList.length);
+    return porscheList[index]; //here's the matching Porsche
+
+}
+
+//write porsche to the screen
+porschePicker.displayPorsche = function(porsche) {
+    console.log(porsche.techSpecs);
+    $('.displayPorsche').append(`<div>We have  ${porsche.techSpecs} </div>`);
+
+}
