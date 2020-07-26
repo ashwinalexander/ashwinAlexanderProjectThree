@@ -42,10 +42,15 @@
         .submitContainer {
             justify-content: center;
             padding-top: 40px;
-            .btnSubmit {
+            .btnSubmit,
+            .btnReset {
                 background-color: $primary-color;
                 color: $light-color;
                 font-weight: 900;
+                margin: 5px;
+            }
+            .btnReset {
+                background-color: $secondary-color;
             }
         }
         .porscheOption {
@@ -62,5 +67,22 @@
                 display: none;
             }
         }
+    }
+}
+
+.displayPorsche {
+    padding: 10px;
+    img {
+        width: 60%;
+        margin: 0 auto;
+    }
+    ;
+    .resultPorsche {
+        display: flex;
+        flex-direction: column;
+    }
+    .infoPorsche {
+        display: flex;
+        flex-direction: column;
     }
 }

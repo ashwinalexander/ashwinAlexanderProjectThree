@@ -346,12 +346,12 @@ html {
   max-width: 1200px;
   width: 100%;
   margin: 0px auto;
-  border: 2px dotted pink;
 }
 
 img {
   width: 100%;
   display: block;
+  height: auto;
 }
 
 .flex-row {
@@ -495,10 +495,16 @@ footer .credits {
   padding-top: 40px;
 }
 
-.porscheQuiz .porscheQuestion .submitContainer .btnSubmit {
+.porscheQuiz .porscheQuestion .submitContainer .btnSubmit,
+.porscheQuiz .porscheQuestion .submitContainer .btnReset {
   background-color: #FF785A;
   color: #fafafa;
   font-weight: 900;
+  margin: 5px;
+}
+
+.porscheQuiz .porscheQuestion .submitContainer .btnReset {
+  background-color: #FFAA5A;
 }
 
 .porscheQuiz .porscheQuestion .porscheOption {
@@ -516,4 +522,33 @@ footer .credits {
 
 .porscheQuiz .porscheQuestion .porscheOption .errorInvisibility {
   display: none;
+}
+
+.displayPorsche {
+  padding: 10px;
+}
+
+.displayPorsche img {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.displayPorsche .resultPorsche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.displayPorsche .infoPorsche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }

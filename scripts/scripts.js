@@ -61,7 +61,7 @@ porschePicker.inventory = {
             car: 'Porsche 718 Boxster',
             typeNumber: '982',
             techSpecs: 'Turbocharged 2.0L flat 4 / 300hp',
-            photo: 'assets/2020 Porsche Boxster Alexander Migl Wikipedia Commons',
+            photo: 'assets/2020 Porsche Boxster Alexander Migl Wikipedia Commons.jpg',
             attribution: 'Photo by Alexander Migl',
             type: 'Weekend'
         },
@@ -256,6 +256,13 @@ porschePicker.init = function() {
     porschePicker.eventListener();
 }
 
+porschePicker.movetoOldNewQuestion = function(e) {
+    e.preventDefault();
+    $("html").animate({
+        scrollTop: $('.porscheOldNew').offset().top
+    }, 'slow');
+};
+
 
 //Event Listeners
 porschePicker.eventListener = function() {
@@ -265,17 +272,30 @@ porschePicker.eventListener = function() {
         e.preventDefault();
         $("html").animate({
             scrollTop: $('.porscheQuiz').offset().top
-        }, "slow");
+        }, 'slow');
     });
 
-    //"skip to next question" Event listener
-    $(".linkUse .linkAge").click(function(e) {
+
+    //"Skip to next question" Event listeners
+    $(".linkUse").click(function(e) {
         e.preventDefault();
-        let jump = $(this).attr('href');
-        let new_position = $(jump).offset();
-        $("html,body").stop().animate({
-            scrollTop: new_position.top - 50
-        }, "800");
+        $("html").animate({
+            scrollTop: $('.porscheOldNew').offset().top
+        }, 'slow');
+    });
+
+    $(".linkAge").click(function(e) {
+        e.preventDefault();
+        $("html").animate({
+            scrollTop: $('.porscheOverUnder').offset().top
+        }, 'slow');
+    });
+
+    $('form').on('reset', function(e) {
+
+        $('.displayPorsche').empty();
+        $(".btnStart").trigger("click");
+
     });
 
 
@@ -292,8 +312,10 @@ porschePicker.eventListener = function() {
             //get a random porsche that matches user selection
             porscheToDisplay = porschePicker.getMatchingPorsche(porschePicker.porscheUse, porschePicker.porscheAge, porschePicker.porscheBudget);
         }
-
+        porschePicker.scrollToCar();
         porschePicker.displayPorsche(porscheToDisplay);
+
+
 
     });
 
@@ -315,7 +337,7 @@ porschePicker.getMatchingPorsche = function(use, age, budget) {
         }
     }
 
-    if (options.length > 1) {
+    if (options.length >= 1) {
         //returns the one random Porsche
         return porschePicker.randomPorsche(options);
 
@@ -326,7 +348,7 @@ porschePicker.getMatchingPorsche = function(use, age, budget) {
 }
 
 
-//returns a random Porsches from the input array of Porsches
+//returns a random Porsche from the input array of Porsches
 porschePicker.randomPorsche = function(porscheList) {
 
     const index = Math.floor(Math.random() * porscheList.length);
@@ -336,7 +358,13 @@ porschePicker.randomPorsche = function(porscheList) {
 
 //write porsche to the screen
 porschePicker.displayPorsche = function(porsche) {
-    console.log(porsche.techSpecs);
-    $('.displayPorsche').append(`<div>We have  ${porsche.techSpecs} </div>`);
+    console.log(porsche.car);
+    $('.displayPorsche').html(`<div class="resultPorsche"><div><img src="${porsche.photo}" alt="${porsche.car}"></div><div class="infoPorsche"><div class="porscheName"><p>${porsche.year} ${porsche.car}</p></div><div class="porscheInternal"><p>Type Number: ${porsche.typeNumber}</p></div><div class="porscheSpecs"><p>Tech Specifications: ${porsche.techSpecs}</p></div><div><p>Price: $${porsche.price}</p></div><div><p>${porsche.attribution}</p></div></div></div>`);
 
+}
+
+porschePicker.scrollToCar = function() {
+    $("html").animate({
+        scrollTop: $('.displayPorsche').offset().top
+    }, 'slow');
 }
