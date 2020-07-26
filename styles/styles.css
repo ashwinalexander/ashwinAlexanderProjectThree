@@ -491,7 +491,7 @@ footer .credits {
 }
 
 .porscheQuiz .porscheQuestion .submitContainer .btnSubmit {
-  background-color: #FFAA5A;
+  background-color: #FF785A;
   color: #fafafa;
   font-weight: 900;
 }
@@ -503,4 +503,12 @@ footer .credits {
 .porscheQuiz .porscheQuestion .porscheOption p {
   padding-top: 10px;
   font-size: 1.5rem;
+}
+
+.porscheQuiz .porscheQuestion .porscheOption .warning {
+  color: red;
+}
+
+.porscheQuiz .porscheQuestion .porscheOption .errorInvisibility {
+  display: none;
 }

@@ -1,7 +1,7 @@
 // creating a namespace
 const porschePicker = {};
 
-// building an inventory of 20+ Porsches (and one itinerant Mercedes!)
+// building an inventory of 20+ Porsches (and one itinerant Mercedes)
 porschePicker.inventory = {
     new: [{
             year: 2020,
@@ -246,7 +246,32 @@ porschePicker.inventory = {
     ]
 };
 
-//Event Listeners
+//checking to see if all three checkboxes are checked.
+//returns true if all checkboxes are checked else displays a reminder
+porschePicker.errorHandling = function(use, age, budget) {
+
+        $('.porscheQuiz .warning').addClass('errorInvisibility'); //hide all warning labels
+        let unfilledFlag = true; //flag to indicate if there are unfilled checkboxes
+
+        if (!use) {
+
+            unfilledFlag = false;
+            $('.porscheDailyWeekend .warning').removeClass('errorInvisibility'); //make warning label visible
+        }
+        if (!age) {
+            unfilledFlag = false;
+            $('.porscheOldNew .warning').removeClass('errorInvisibility'); //make warning label visible
+
+        }
+        if (!budget) {
+            unfilledFlag = false;
+            $('.porscheOverUnder .warning').removeClass('errorInvisibility'); //make warning label visible
+        }
+
+        return unfilledFlag;
+
+    }
+    //Event Listeners
 porschePicker.eventListener = function() {
 
     //"get started" Event listener
@@ -257,7 +282,6 @@ porschePicker.eventListener = function() {
         }, "slow");
     });
 
-
     //"skip to next question" Event listener
     $(".linkUse .linkAge").click(function(e) {
         e.preventDefault();
@@ -267,13 +291,42 @@ porschePicker.eventListener = function() {
             scrollTop: new_position.top - 50
         }, "800");
     });
+
+    //clear warning labels if a value is selected
+    $('#porscheForm').on('change', ':radio', function() {
+        if ($(this).is(':checked')) {
+            console.log($(this).val() + ' is now checked');
+        } else {
+            console.log($(this).val() + ' is now unchecked');
+        }
+    });
+
+    //on submitting the form
+    $(".btnSubmit").click(function(e) {
+        // e.preventDefault();
+        // console.log('checking');
+
+        // porschePicker.porscheUse = $('input[name=type]:checked').val();
+        // porschePicker.porscheAge = $('input[name=age]:checked').val();
+        // porschePicker.porscheBudget = $('input[name=price]:checked').val();
+
+        // //proceed after confirming we have all our boxes checked
+        // if (porschePicker.errorHandling(porschePicker.porscheUse, porschePicker.porscheAge, porschePicker.porscheBudget)) {
+        //     console.log('good to go');
+        // }
+
+
+        //if no selection return an error message label in the h3
+        //save selections to variables
+        //clear error message labels
+        //iterate through array
+        //find one random match
+        //display match on screeen
+        //if more than one, also display you may also be interested in
+    });
+
+
 }
-
-
-
-//build the randomiser
-
-//
 
 porschePicker.init = function() {
     porschePicker.eventListener();
