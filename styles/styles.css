@@ -459,9 +459,6 @@ footer .credits a {
 
 .porscheIntro .pickerShortDesc {
   background-color: #FF785A;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -478,12 +475,6 @@ footer .credits a {
 .porscheIntro .pickerLongDesc {
   padding: 20px;
   background-color: #FFD25A;
-}
-
-.porscheIntro .pickerLongDesc h2 {
-  font-weight: bold;
-  text-align: right;
-  color: #191919;
 }
 
 .porscheQuiz .porscheQuestion {
@@ -607,4 +598,83 @@ footer .credits a {
 
 .notes p {
   line-height: 1rem;
+}
+
+@media (max-width: 920px) {
+  .credits p,
+  .credits a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 855px) {
+  .pickerShortDesc h2,
+  .btnStart,
+  .btnSubmit,
+  .btnReset {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 750px) {
+  header div {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .credits p,
+  .credits a,
+  .pickerLongDesc p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .pickerShortDesc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  .pickerShortDesc div {
+    padding: 10px;
+  }
+  .pickerShortDesc button {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .credits p,
+  .credits a {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .pickerShortDesc h2,
+  .btnStart,
+  .btnSubmit,
+  .btnReset {
+    font-size: 1.6rem;
+  }
+  .displayPorsche p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .pickerShortDesc h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 2rem;
+  }
 }

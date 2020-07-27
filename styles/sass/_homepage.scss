@@ -2,7 +2,6 @@
 .porscheIntro {
     .pickerShortDesc {
         background-color: $primary-color;
-        display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 20px;
@@ -13,11 +12,6 @@
     .pickerLongDesc {
         padding: 20px;
         background-color: $tertiary-color;
-        h2 {
-            font-weight: bold;
-            text-align: right;
-            color: $dark-color;
-        }
     }
 }
 
