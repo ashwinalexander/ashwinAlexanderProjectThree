@@ -442,8 +442,19 @@ header nav div h1 {
   color: #fafafa;
 }
 
+footer {
+  padding-top: 40px;
+}
+
 footer .credits {
   background-color: #FF785A;
+  text-align: center;
+  padding: 5px;
+}
+
+footer .credits p,
+footer .credits a {
+  color: #fafafa;
 }
 
 .porscheIntro .pickerShortDesc {
@@ -485,6 +496,10 @@ footer .credits {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #FFF05A;
+}
+
+.porscheQuiz .porscheQuestion .questionRow a {
+  padding: 10px;
 }
 
 .porscheQuiz .porscheQuestion h3 {
