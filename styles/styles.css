@@ -495,16 +495,11 @@ footer .credits {
   padding-top: 40px;
 }
 
-.porscheQuiz .porscheQuestion .submitContainer .btnSubmit,
-.porscheQuiz .porscheQuestion .submitContainer .btnReset {
+.porscheQuiz .porscheQuestion .submitContainer .btnSubmit {
   background-color: #FF785A;
   color: #fafafa;
   font-weight: 900;
   margin: 5px;
-}
-
-.porscheQuiz .porscheQuestion .submitContainer .btnReset {
-  background-color: #FFAA5A;
 }
 
 .porscheQuiz .porscheQuestion .porscheOption {
@@ -516,21 +511,17 @@ footer .credits {
   font-size: 1.5rem;
 }
 
-.porscheQuiz .porscheQuestion .porscheOption .warning {
-  color: red;
-}
-
-.porscheQuiz .porscheQuestion .porscheOption .errorInvisibility {
-  display: none;
-}
-
 .displayPorsche {
   padding: 10px;
 }
 
 .displayPorsche img {
-  width: 60%;
-  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+
+.displayPorsche .highlight {
+  font-weight: 900;
 }
 
 .displayPorsche .resultPorsche {
@@ -551,4 +542,20 @@ footer .credits {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #FFF05A;
+  padding: 10px;
+}
+
+.reset {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reset .btnReset {
+  background-color: #FF785A;
+  color: #fafafa;
+  font-weight: 900;
+  margin: 5px;
+  display: none;
 }

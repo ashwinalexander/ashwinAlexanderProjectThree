@@ -256,44 +256,34 @@ porschePicker.init = function() {
     porschePicker.eventListener();
 }
 
-porschePicker.movetoOldNewQuestion = function(e) {
-    e.preventDefault();
-    $("html").animate({
-        scrollTop: $('.porscheOldNew').offset().top
-    }, 'slow');
-};
-
+//slow scroll function
+porschePicker.scrollAway = function(from, to) {
+    $(from).click(function(e) {
+        e.preventDefault();
+        $("html").animate({
+            scrollTop: $(to).offset().top
+        }, 'slow');
+    });
+}
 
 //Event Listeners
 porschePicker.eventListener = function() {
 
-    //"get started" Event listener
-    $(".btnStart").click(function(e) {
-        e.preventDefault();
-        $("html").animate({
-            scrollTop: $('.porscheQuiz').offset().top
-        }, 'slow');
-    });
+    //event listener for the Get Started button
+    porschePicker.scrollAway(".btnStart", '.porscheQuiz');
+
+    //event listeners for the Skip to Next Question buttons
+    porschePicker.scrollAway(".linkUse", '.porscheOldNew');
+    porschePicker.scrollAway(".linkAge", '.porscheOverUnder');
+    porschePicker.scrollAway(".linkSubmit", '.submitContainer');
 
 
-    //"Skip to next question" Event listeners
-    $(".linkUse").click(function(e) {
-        e.preventDefault();
-        $("html").animate({
-            scrollTop: $('.porscheOldNew').offset().top
-        }, 'slow');
-    });
 
-    $(".linkAge").click(function(e) {
-        e.preventDefault();
-        $("html").animate({
-            scrollTop: $('.porscheOverUnder').offset().top
-        }, 'slow');
-    });
-
-    $('form').on('reset', function(e) {
-
+    $('.btnReset').on('click', function(e) {
+        $('form').trigger("reset");
         $('.displayPorsche').empty();
+        $(".btnSubmit").show();
+        $(this).hide(); //hide the reset search button
         $(".btnStart").trigger("click");
 
     });
@@ -302,6 +292,9 @@ porschePicker.eventListener = function() {
     //on submitting the form
     $('form').on('submit', function(e) {
         e.preventDefault();
+        $(".btnSubmit").hide();
+        $(".btnReset").show();
+
         let porscheToDisplay;
         porschePicker.porscheUse = $('input[name=type]:checked').val();
         porschePicker.porscheAge = $('input[name=age]:checked').val();
@@ -312,18 +305,13 @@ porschePicker.eventListener = function() {
             //get a random porsche that matches user selection
             porscheToDisplay = porschePicker.getMatchingPorsche(porschePicker.porscheUse, porschePicker.porscheAge, porschePicker.porscheBudget);
         }
-        porschePicker.scrollToCar();
-        porschePicker.displayPorsche(porscheToDisplay);
-
-
-
+        porschePicker.scrollToCar(); //scroll down to the displayed car slowly
+        porschePicker.displayPorsche(porscheToDisplay); //display a POrsche on the screen
     });
-
-
 }
 
 
-//returns 1 random Porsche based on user selections
+//returns 1 random Porsche object based on user selections
 porschePicker.getMatchingPorsche = function(use, age, budget) {
 
     const options = [];
@@ -343,24 +331,28 @@ porschePicker.getMatchingPorsche = function(use, age, budget) {
 
     } else {
         //return no Porsches :(
-        return options;
+        return null;
     }
 }
 
 
-//returns a random Porsche from the input array of Porsches
+//returns a random Porsche object from the input array of Porsches
 porschePicker.randomPorsche = function(porscheList) {
-
     const index = Math.floor(Math.random() * porscheList.length);
-    return porscheList[index]; //here's the matching Porsche
-
+    return porscheList[index]; //here's the matching Porsche object
 }
 
 //write porsche to the screen
 porschePicker.displayPorsche = function(porsche) {
-    console.log(porsche.car);
-    $('.displayPorsche').html(`<div class="resultPorsche"><div><img src="${porsche.photo}" alt="${porsche.car}"></div><div class="infoPorsche"><div class="porscheName"><p>${porsche.year} ${porsche.car}</p></div><div class="porscheInternal"><p>Type Number: ${porsche.typeNumber}</p></div><div class="porscheSpecs"><p>Tech Specifications: ${porsche.techSpecs}</p></div><div><p>Price: $${porsche.price}</p></div><div><p>${porsche.attribution}</p></div></div></div>`);
+    //ensuring the porsche object isn't empty
+    if (porsche) {
 
+        $('.displayPorsche').html(`<div class="resultPorsche"><div><img src="${porsche.photo}" alt="${porsche.car}"></div><div class="infoPorsche"><div class="porscheName"><p>The <span class="highlight"> ${porsche.year} ${porsche.car} </span>will be perfect for your adventures! Every Porsche factory project has an internal "type number" and this Porsche's type number is <span class="highlight"> ${porsche.typeNumber}</span>. The ${porsche.car} typically costs <span class="highlight"> ${porsche.price}</span>CAD. Technical Specifications: <span class="highlight">${porsche.techSpecs}</span></p></div><div><p> ${porsche.attribution}</p></div></div></div>`);
+    } else {
+
+
+        $('.displayPorsche').html(`<div class="infoPorsche"><p>No Porsches available to match your selection. What's German for You Are Very Discerning?</p> </div>`);
+    }
 }
 
 porschePicker.scrollToCar = function() {
