@@ -347,7 +347,7 @@ porschePicker.displayPorsche = function(porsche) {
     //ensuring the porsche object isn't empty
     if (porsche) {
 
-        $('.displayPorsche').html(`<div class="resultPorsche"><div><img src="${porsche.photo}" alt="${porsche.car}"></div><div class="infoPorsche"><div class="porscheName"><p>The <span class="highlight"> ${porsche.year} ${porsche.car} </span>will be perfect for your adventures! Every Porsche factory project has an internal "type number" and this Porsche's type number is <span class="highlight"> ${porsche.typeNumber}</span>. The ${porsche.car} typically costs <span class="highlight"> ${porsche.price}</span>CAD. Technical Specifications: <span class="highlight">${porsche.techSpecs}</span></p></div><div><p> ${porsche.attribution}</p></div></div></div>`);
+        $('.displayPorsche').html(`<div class="resultPorsche"><div><img src="${porsche.photo}" alt="${porsche.car}"></div><div class="infoPorsche"><div class="porscheName"><p>The <span class="highlight"> ${porsche.year} ${porsche.car} </span>will be perfect for your adventures! Every Porsche factory project has an internal "type number" and this one's type number is <span class="highlight"> ${porsche.typeNumber}</span>. The ${porsche.car} typically costs <span class="highlight"> ${porsche.price} CAD</span>. Technical Specifications: <span class="highlight">${porsche.techSpecs}</span></p></div><div><p> ${porsche.attribution}</p></div></div></div>`);
     } else {
 
 

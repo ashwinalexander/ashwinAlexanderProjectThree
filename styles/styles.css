@@ -515,6 +515,10 @@ footer .credits {
   padding: 10px;
 }
 
+.displayPorsche P {
+  font-family: "Roboto", sans-serif;
+}
+
 .displayPorsche img {
   width: 100%;
   display: block;
